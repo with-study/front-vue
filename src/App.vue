@@ -1,9 +1,6 @@
 <template>
     <div>
         <Notice />
-        <div class="notice">
-            123123123
-        </div>
     </div>
 </template>
 
