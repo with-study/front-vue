@@ -1,9 +1,8 @@
+
 <template>
     <div>
         <Notice />
-        <div class="notice">
-            123123123
-        </div>
+        <div class="notice"></div>
     </div>
 </template>
 
@@ -19,6 +18,7 @@ export default {
 <style lang="scss">
 $Color-Black: #000;
 .notice {
+    overflow-x:auto;
     border: 1px solid $Color-Black;
 }
 </style>
