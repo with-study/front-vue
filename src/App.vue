@@ -1,18 +1,20 @@
 <template>
     <div>
-        <Notice />
-        <div class="notice">
-            123123123
-        </div>
+<!--        <Notice />-->
+        <Bind />
+<!--        <div class="notice">-->
+<!--            123123123-->
+<!--        </div>-->
     </div>
 </template>
 
 <script>
 import Notice from "./pages/Notice";
+import Bind from "./pages/Bind";
 
 export default {
     name: 'App',
-	components: {Notice},
+	components: { Notice, Bind},
 }
 </script>
 

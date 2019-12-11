@@ -2,7 +2,7 @@
     <div class="notice">
         <ul>
             <NoticeItem
-                v-for="list in lists"
+                v-for="(list, index) in lists"
                 :title="list.title"
                 :date="list.date"
                 :key="index"

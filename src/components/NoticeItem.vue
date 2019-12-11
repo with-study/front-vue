@@ -1,5 +1,8 @@
 <template>
   <li>
+    <figure>
+      <img src="" alt="">
+    </figure>
     <p>{{ title }}</p>
     <p>{{ date }}</p>
   </li>
