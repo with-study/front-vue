@@ -3,9 +3,12 @@
         <ul>
             <NoticeItem
                 v-for="list in lists"
-                :title="list.title"
-                :date="list.date"
-                :key="index"
+                :name="list.name"
+                :price="list.price"
+                :key="list.id"
+                :stock="list.stock"
+                :src="list.image"
+                :tags="list.tags"
             />
         </ul>
     </div>
@@ -17,32 +20,18 @@ export default {
     name: 'Notice',
 	components: {NoticeItem},
 	data() {
-		return {
-			lists: [
-                {
-                	id: 0,
-                	title: '공지사항 제목1',
-                    date: '2019.12.6'
-                },
-				{
-					id: 1,
-					title: '공지사항 제목2',
-					date: '2019.12.6'
-				},
-				{
-					title: '공지사항 제목3',
-					date: '2019.12.6'
-				},
-				{
-					title: '공지사항 제목4',
-					date: '2019.12.6'
-				}
-            ]
-		}
-	}
+        return {
+            lists: null
+        }
+    },
+    mounted () {
+        const axios = require('axios').default;
+        axios
+            .get('http://localhost:3000/api')
+            .then(response => (this.lists = response.data.beers))
+            .catch(error => console.log(error))
+    }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
