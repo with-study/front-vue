@@ -10,7 +10,6 @@
     <p><img v-bind:src="image" alt=""></p>
     <p>{{ price }}원</p>
     <p>{{ stock }}</p>
-
   </li>
 </template>
 
@@ -29,5 +28,6 @@ export default {
 </script>
 
 <style>
-
+  ul {display: flex}
+  li {list-style: none; padding-left:10px; border-right: 1px solid #ccc }
 </style>

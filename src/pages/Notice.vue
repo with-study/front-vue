@@ -53,16 +53,13 @@ export default {
 
 
 	},
-    mounted (){
+  mounted (){
+      axios.get('http://localhost:3000/api').then(res => {
+          this.infos = res.data.beers;
+      })
 
-        axios.get('http://localhost:3000/api').then(res => {
-            this.infos = res.data.beers;
-        })
-
-    }
+  }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
